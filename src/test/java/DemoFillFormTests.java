@@ -1,3 +1,5 @@
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -25,18 +27,18 @@ public class DemoFillFormTests {
 
 
     @Test
-    void openPageTest(){
+    void openPageTest() {
         openPage();
         fillForm();
         checkForm();
     }
 
-    void openPage(){
+    void openPage() {
         //Открыть страницу
         open("https://demoqa.com/automation-practice-form");
     }
 
-    void fillForm(){
+    void fillForm() {
         //заполниь форму
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
@@ -63,7 +65,7 @@ public class DemoFillFormTests {
         $("#submit").click();
     }
 
-    void checkForm(){
+    void checkForm() {
         //проверить форму
         checkValue("Student Name", this.firstName + " " + this.lastName);
         checkValue("Student Email", this.email);
@@ -77,7 +79,7 @@ public class DemoFillFormTests {
         checkValue("State and City", this.state + " " + this.city);
     }
 
-    void checkValue (String key, String value) {
+    void checkValue(String key, String value) {
         $$(".table-responsive td").find(text(key)).sibling(0).shouldHave(exactText(value));
     }
 }
