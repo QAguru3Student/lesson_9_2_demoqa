@@ -1,5 +1,5 @@
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+package ant.one.tests;
+
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class DemoFillFormTests {
+public class DemoFillFormWithPageObjectsTests extends TestBase {
     String firstName = "Anton";
     String lastName = "Babushkin";
     String email = "ab@mail.ru";
@@ -26,6 +26,7 @@ public class DemoFillFormTests {
     String filename = "avatar.jpg";
 
 
+
     @Test
     void openPageTest() {
         openPage();
@@ -35,7 +36,7 @@ public class DemoFillFormTests {
 
     void openPage() {
         //Открыть страницу
-        open("https://demoqa.com/automation-practice-form");
+        registrationsPage.openPage();
     }
 
     void fillForm() {
