@@ -12,19 +12,20 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DemoFillFormTests extends TestBase {
-    String firstName = "Anton";
+    String firstName = "Ant";
     String lastName = "Babushkin";
-    String email = "ab@mail.ru";
+    String email = "ab@gmail.ru";
     String gender = "male";
-    String mobileNumber = "9242832027";
+    String mobileNumber = "+79242832027";
     String year = "1987";
-    String month = "October";
+    String month = "sept";
     String day = "24";
     String[] hobbies = {"Sports", "Music"};
     String subjects = "Maths";
     String address = "Moscow, Marinskyi park 35, 122";
     String state = "NCR";
     String city = "Lucknow";
+    String filename = "avatar.jpg";
     String filename = "avatar.jpg";
 
 
