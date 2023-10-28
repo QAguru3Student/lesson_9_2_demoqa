@@ -1,7 +1,5 @@
 package ant.one.tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -24,9 +22,9 @@ public class DemoFillFormTests extends TestBase {
     String subjects = "Maths";
     String address = "Moscow, Marinskyi park 35, 122";
     String state = "NCR";
-    String city = "Lucknow";
+//    String city = "Lucknow";
     String filename = "avatar.jpg";
-    String filename = "avatar.jpg";
+
 
 
 
